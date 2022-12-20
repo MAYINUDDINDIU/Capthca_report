@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>PR-REPORT</title>
+
+    
+</head>
+
+<body class="container mt-1">
+             
+
+    <div class="col md-3 text-center">
+        <button class="btn btn-success mb-2" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" id="showResult">Submit</button>
+    </div>
+
+<!--=====================================For Sign Up Modal==================================== -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="text-end text-white mr-5">
+                <button onclick="myFunction()" style="margin-right: 20px; color: white;" type="button"
+                    class="btn-close p-2  bg-danger rounded-circle" data-bs-dismiss="modal" aria-label="Close"></button>
+                <!-- <input type="button" onclick="myFunction()" value="Reset form"> -->
+            </div>
+
+            <div class="modal-body">
+
+                <form id="myForm">
+
+                    <div class="container" id="invoice">
+
+                        <div class=" p-4 mb-5 bg-body rounded border border-mute">
+                            <div class="text-center ">
+                                <img class="shadow rounded-circle p-2" style="height: 100px; width: 100px;" src="i.png"
+                                    alt="">
+                            </div>
+                            <h3 class="text-success font-weight-bold text-center">Fareast Islami Life Insurance Company
+                                Limited</h3>
+                            <h6 class="text-center">Head Office: Fareast Tower, 35 Topkhana Road, Dhaka-1000, Tel:(PABX)
+                                9568120, 9573076
+                            </h6>
+                            <h6 class="text-center"> Email: info@fareastislamilife.com, Web:www.fareastislamilife.com
+                            </h6>
+
+                            <h6 class="text-center text-success font-weight-bold">PREMIUM RECEIPT (PR)</h6>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 p-2">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h6>Serial No.</h6>
+                                        </div>
+                                    </div> <br />
+                                    <div>
+                                        <table class="table">
+
+                                            <tbody>
+
+                                                <td class="col-md-9">Insured:</td>
+
+
+
+                                                <td type="text" class="col-md-3" style="font-size: 13px;"><input
+                                                        type="text" id="insured" class=" border-0 bg-white" disabled>
+                                                </td>
+
+                                                <tr>
+                                                    <td class="col-md-9">Name of Payor:</td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="name_payor" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-md-9">Mobile No. </td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="Mob_no" class=" border-0 bg-white" disabled>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-md-9">Policy/Proposal/Ref No. </td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="Pol_no" class=" border-0 bg-white" disabled>
+                                                    </td>
+                                                </tr>
+                                                <!-- <tr>
+                                        <td class="col-md-9">Product Table/Term </td>
+                                        <td type="text" class="col-md-3"><input type="text" id="Table_id"
+                                                class=" border-0 bg-white" disabled> </td>
+                                    </tr> -->
+                                                <tr>
+
+                                                <tr>
+                                                    <td class="col-md-9">Commencement Date:</td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="Pr_date" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-9">Sum Assured:</td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="Sum_assured" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-9">Premium Amount:</td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="Prem_amt" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-9">Recieved Amount:</td>
+                                                    <td type="text" style="font-size: 13px;" class="col-md-3"><input
+                                                            type="text" id="rev_amt" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-md-9">In Words:</td>
+                                                    <td class="col-md-3" style="font-size: 13px;"><i
+                                                            class="fas fa-rupee-sign" area-hidden="true"></i> </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-6 col-sm-12 p-2">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h6 class="text-end">Department Copy</h6>
+                                        </div>
+                                    </div> <br />
+
+
+                                    <div>
+                                        <table class="table">
+
+                                            <tbody>
+                                                <tr>
+                                                    <td>Receipt No. </td>
+                                                    <td type="text" style="font-size: 13px;"><input type="text"
+                                                            id="rec_no" class=" border-0 bg-white" disabled> </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-7">Receipt Date:</td>
+                                                    <td type="text" class="col-md-5" style="font-size: 13px;"><input
+                                                            type="text" id="rec_date" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-md-9">On Account of:</td>
+                                                    <td type="text" class="col-md-3" style="font-size: 10px; "><input
+                                                            type="text" id="ONACC" class=" border-0 bg-white" disabled>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-md-7">Collection Type:</td>
+                                                    <td type="text" class="col-md-5" style="font-size: 13px;"><input
+                                                            type="text" id="Prem_type" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+                                                </tr>
+                                                <tr>
+                                                    <td class="col-md-7">Cheque No. & Date:</td>
+                                                    <td type="text" class="col-md-5" style="font-size: 13px;"><input
+                                                            type="text" id="chk_no" class=" border-0 bg-white" disabled>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-7">Bank & Branch:</td>
+                                                    <td type="text" class="col-md-5" style="font-size: 13px;"><input
+                                                            type="text" id="bnk_name" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-7">Org. Setup:</td>
+                                                    <td style="font-size: 10px;" class="col-md-5 mr-5"><input
+                                                            type="text" id="setup" class=" border-0 bg-white" disabled>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-7">Office Name/Code:</td>
+                                                    <td type="text" style="font-size: 10px;" class="col-md-5"><input
+                                                            type="text" id="off_name" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="col-md-7">Pol. Status & Pay Mode:</td>
+                                                    <td type="text" style="font-size: 10px;" class="col-md-5"><input
+                                                            type="text" id="pay_mode" class=" border-0 bg-white"
+                                                            disabled> </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="row mt-3 mb-1">
+
+                                <div class="col-md-3">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-md-9">No. of Installment Paid</td>
+                                            <td type="text" class="col-md-5 text-center"><input type="text"
+                                                    id="total_paid" class=" border-0 bg-white" disabled> </td>
+                                        </tr>
+                                    </tbody>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-size: 12px;" class="col-md-9">Total Prem. Paid (Tk.)</td>
+                                            <td style="font-size: 11px;" type="text" class="col-md-5"><input type="text"
+                                                    id="TOT_PREMPAID" class=" border-0 bg-white" disabled> </td>
+                                        </tr>
+                                    </tbody>
+
+                                </div>
+
+                                <div class="col-md-3">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-size: 12px;" class="col-md-9">Current Due Date</td>
+                                            <td type="text" style="font-size: 11px;" class="col-md-5"><input type="text"
+                                                    id="DUEDATE" class=" border-0 bg-white" disabled> </td>
+                                        </tr>
+                                    </tbody>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-size: 12px;" class="col-md-7">Next Due Date</td>
+                                            <td type="text" style="font-size: 11px;" class="col-md-5"><input type="text"
+                                                    id="NEXTPREM" class=" border-0 bg-white" disabled> </td>
+                                        </tr>
+                                    </tbody>
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+                </form>
+                <div class="text-center">
+                    <button style="margin-left: 50px" id="download-button" class="btn btn-primary mt-0 ">Download as
+                        PDF</button>
+                </div>
+
+                <div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--=====================================For Sign Up Modal==================================== -->
+
+   
+                 
+            
+
+<script>
+    const button = document.getElementById('download-button');
+
+    function generatePDF() {
+        // Choose the element that your content will be rendered to.
+        const element = document.getElementById('invoice');
+        // Choose the element and save the PDF for your user.
+        html2pdf().from(element).save('statement.pdf');
+    }
+
+    button.addEventListener('click', generatePDF);
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script type="text/javascript">
+
+      function _0x3a08() { var _0x4e7150 = ['Pr_date', '#Prem_amt', '#mob_no', 'BK_BR_NAME', 'Sum_assured', '2131086wyCCoh', 'CHEQUE', 'CHQ_NO_DATE', '#NEXTPREM', '#Mob_no', 'success', '#DUEDATE', '202868RYaZoV', 'http://202.164.213.67/mat/pr_info.php', '#name_payor', 'pr_no', '#ONACC', '#TOT_PREMPAID', '#Pr_date', 'DUEDATE', '#Prem_type', 'NEXTPREM', 'Life_premium', '#Table_id', 'Pol_no', 'mob_no', '#Pol_no', '#setup', 'INST_MODE', 'Please\x20check\x20your\x20PR\x20Number\x20&\x20Mobile\x20Number', 'Mob_no', 'click', '#bnk_name', 'OFF_NAME', '#acc_of', '65StZlPb', '2533008JVDJnE', '#total_paid', 'location', 'CASH', '#off_name', 'Prem_type', 'Error', 'SINGLE', 'TOT_PREMPAID', '1zzAQAw', 'Org_code', '#org', '2654226ZubpDw', '#chk_no', 'ONACC', '111237vLFako', 'GET', '#pr_no', 'search', '1297930rLOddw', '#pay_mode', '#Sum_assured', 'get', '#showResult', 'QUATERLY', 'log', 'ajax', '#Term', 'Insured', 'val', '5446376nENSzQ', '63MWLTjA', '#rec_no']; _0x3a08 = function () { return _0x4e7150; }; return _0x3a08(); } function _0x553d(_0x572130, _0x3514a4) { var _0x3a08d7 = _0x3a08(); return _0x553d = function (_0x553daf, _0xdfb923) { _0x553daf = _0x553daf - 0x128; var _0x5ab73e = _0x3a08d7[_0x553daf]; return _0x5ab73e; }, _0x553d(_0x572130, _0x3514a4); } var _0x47d3e7 = _0x553d; (function (_0x4b8bd6, _0x2af4a8) { var _0xd91a73 = _0x553d, _0x239bc8 = _0x4b8bd6(); while (!![]) { try { var _0xbd6c18 = parseInt(_0xd91a73(0x15e)) / 0x1 * (parseInt(_0xd91a73(0x136)) / 0x2) + -parseInt(_0xd91a73(0x161)) / 0x3 + -parseInt(_0xd91a73(0x13d)) / 0x4 * (parseInt(_0xd91a73(0x154)) / 0x5) + -parseInt(_0xd91a73(0x155)) / 0x6 + parseInt(_0xd91a73(0x164)) / 0x7 + parseInt(_0xd91a73(0x12e)) / 0x8 + -parseInt(_0xd91a73(0x12f)) / 0x9 * (-parseInt(_0xd91a73(0x168)) / 0xa); if (_0xbd6c18 === _0x2af4a8) break; else _0x239bc8['push'](_0x239bc8['shift']()); } catch (_0x354ad5) { _0x239bc8['push'](_0x239bc8['shift']()); } } }(_0x3a08, 0xac027), $(_0x47d3e7(0x16c))[_0x47d3e7(0x150)](function () { var _0x3b6f25 = _0x47d3e7; const _0x261466 = window['location'][_0x3b6f25(0x167)], _0x314298 = new URLSearchParams(_0x261466), _0x2499da = _0x314298[_0x3b6f25(0x16b)](_0x3b6f25(0x140)), _0x1a91d9 = _0x314298[_0x3b6f25(0x16b)](_0x3b6f25(0x14a)); var _0x2d4b0a = $(_0x3b6f25(0x166))[_0x3b6f25(0x12d)](), _0x18044b = $(_0x3b6f25(0x133))[_0x3b6f25(0x12d)](); $[_0x3b6f25(0x12a)]({ 'url': _0x3b6f25(0x13e), 'method': _0x3b6f25(0x165), 'data': { 'PR_NO': _0x2499da, 'MOB_NO': _0x1a91d9 }, 'success': function (_0x51e568) { var _0x18b52d = _0x3b6f25, _0x1a1e08 = $['parseJSON'](_0x51e568); console['log'](_0x1a1e08[0x0]), console[_0x18b52d(0x129)](_0x1a1e08[0x0][_0x18b52d(0x13b)]), $('#insured')[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x12c)]), $(_0x18b52d(0x13f))[_0x18b52d(0x12d)](_0x1a1e08[0x0]['Name_payor']), $(_0x18b52d(0x13a))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x14f)]), $(_0x18b52d(0x14b))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x149)]), $(_0x18b52d(0x148))[_0x18b52d(0x12d)](_0x1a1e08[0x0]['Table_id']), $(_0x18b52d(0x16a))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x135)]), $(_0x18b52d(0x132))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x147)]), $(_0x18b52d(0x14c))[_0x18b52d(0x12d)](_0x1a1e08[0x0]['Org_Setup']), $(_0x18b52d(0x143))[_0x18b52d(0x12d)](_0x1a1e08[0x0]['Pr_date']), $(_0x18b52d(0x12b))[_0x18b52d(0x12d)](_0x1a1e08[0x0]['Term']), $('#rev_amt')[_0x18b52d(0x12d)](_0x1a1e08[0x0]['Prem_amt']), $(_0x18b52d(0x153))['val'](_0x1a1e08[0x0][_0x18b52d(0x15a)]), $('#rec_date')[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x131)]), $(_0x18b52d(0x160))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x15f)]), $(_0x18b52d(0x145))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x15a)]), $(_0x18b52d(0x130))[_0x18b52d(0x12d)](_0x1a1e08[0x0]['RECPTNO']), $(_0x18b52d(0x159))['val'](_0x1a1e08[0x0][_0x18b52d(0x152)]), $(_0x18b52d(0x141))['val'](_0x1a1e08[0x0][_0x18b52d(0x163)]), $(_0x18b52d(0x156))['val'](_0x1a1e08[0x0]['TOT_INSTPAID']), $(_0x18b52d(0x142))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x15d)]), $(_0x18b52d(0x13c))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x144)]), $(_0x18b52d(0x139))['val'](_0x1a1e08[0x0][_0x18b52d(0x146)]), $(_0x18b52d(0x162))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x138)]), $(_0x18b52d(0x151))[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x134)]), $('#INST_MODE')[_0x18b52d(0x12d)](_0x1a1e08[0x0][_0x18b52d(0x14d)]); var _0x20a3b7 = _0x1a1e08[0x0]['Paytype']; _0x20a3b7 == 0x1 ? $(_0x18b52d(0x145))[_0x18b52d(0x12d)]([_0x18b52d(0x158)]) : $(_0x18b52d(0x145))[_0x18b52d(0x12d)]([_0x18b52d(0x137)]); var _0x2cc359 = _0x1a1e08[0x0][_0x18b52d(0x14d)]; _0x2cc359 == 0x5 && $(_0x18b52d(0x169))[_0x18b52d(0x12d)](['MONTHLY']); _0x2cc359 == 0x4 && $(_0x18b52d(0x169))[_0x18b52d(0x12d)]([_0x18b52d(0x15c)]); _0x2cc359 == 0x3 && $(_0x18b52d(0x169))[_0x18b52d(0x12d)]([_0x18b52d(0x128)]); _0x2cc359 == 0x2 && $(_0x18b52d(0x169))[_0x18b52d(0x12d)](['H-YEARLY']); _0x2cc359 == 0x1 && $(_0x18b52d(0x169))[_0x18b52d(0x12d)](['YEARLY']); var _0x4df7be = _0x1a1e08[0x0][_0x18b52d(0x13b)]; console['log'](_0x4df7be); if (_0x4df7be == 0x1) { } _0x4df7be != 0x1 && (alert(_0x18b52d(0x14e)), window[_0x18b52d(0x157)]['replace']('http://172.17.11.192/CAPTCHA/index.html')); }, 'error': function () { var _0x4297e1 = _0x3b6f25; alert(_0x4297e1(0x15b)); } }); }));
+    </script>
+
+<script>
+    function myFunction() {
+        document.getElementById("myForm").reset();
+
+        location.href = 'index.html';
+
+
+    }
+</script>
+
+
+
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('#exampleModal').modal('show');
+    });
+</script>
+
+<script>
+    document.getElementById('showResult').click();
+                document.getElementById('showResult').style.visibility = 'hidden';
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+<!-- html2pdf CDN link -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="html2pdf.bundle.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>
